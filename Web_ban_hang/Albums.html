@@ -1,0 +1,755 @@
+<!-- Lập trình Web NHÓM 7:  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title> SEVENTEEN - ALBUMS</title>
+    <link href="image/logo.PNG" rel="shortcut icon" type="image/vnd.microsoft.icon" /> 
+    <link rel = "preconnect" href="https://fonts.gstatic.com">
+    <link href = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel = "stylesheet">
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel = "stylesheet" href = "css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="jquery.js">
+    </script>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="java.js"></script>
+	<script> 	window.onload=function(){showSearch();};
+	</script>
+</head>
+
+<body>
+    <header style = "position: fixed;">
+        <div class = "brand">  <!--style.css / 40 -->
+            <a id = "link-home" href = "index.html"><img src = "image\logoChuBlack.PNG" width = "250px" height = "135px" style = "margin-top: -27px;"></a>
+        </div>
+        <ul>
+            <div class = "menubook">  <!--style.css / 118-->
+                <div class = "dropdown">   <!--style.css / 131-->
+                    <a>sản phẩm</a>
+                <!--style.css / 136-->    <div class = "dropdown-content" style = "font-size: 11pt; background-color: rgb(247, 202, 201);">
+                        <a href = "Albums.html">Albums</a><br>
+                        <a href = "Lightstick.html">Lightstick</a><br>
+                        <a href = "Cards.html">Bo Góc</a><br>
+                        <a href = "Goods.html">Goods</a><br>
+                        <a href = "Anime.html">Goods Anime</a><br>
+                        <a href = "Sale.html">Khuyến Mãi</a>
+					</div>
+				</div>
+			</div>
+			<li><a id = "tt" href = "TinTuc.html">TIN TỨC</a></li>    
+                <li><a id = "DK" href = "DangKi.html">ĐĂNG KÝ</a></li>
+            <li><a id = "link-signin" href = "DangNhap.html"><i class = "fa fa-user"></i>Đăng nhập</a></li>
+            <li><a id = "link-cart" href = "GioHang.html"><svg xmlns = "http://www.w3.org/2000/svg" width = "16" height = "16"
+                        fill = "currentColor" class = "bi bi-cart" viewBox = "0 0 16 16" onclick="openCart()">
+                        <path
+                            d = "M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>Giỏ hàng</a></li>
+					<div class = "box-search" >  <!--style.css / 88-->
+						<form name="frm-search"method="get" action="timkiem.html">
+							<div class="input-container" >	
+                               
+							<input class="search-input"  style = "color: #fff; background: #0b2e3f; border: 10px; border-radius: 40px; position: absolute; top: -14px; left: -67px; " type="text" name="words" onkeypress="checkKeySearch(e)" >
+							<button style = "color: #21DFCD; background: #0b2e3f; display: flex; border-radius: 50%; justify-content: center; align-items: center; transition: 0,4s; cursor: pointer; text-decoration: none; width: 40px; font-size: 1.3rem; height: 40px; position: absolute; top: -12px; left: 307px; " name = "search" value = "OK"
+                        type="search" >
+						<i><svg xmlns = "http://www.w3.org/2000/svg" width = "14" height = "14" fill = "currentColor"
+							class="bi bi-search" viewBox = "0 0 16 16" onclick="doSearch()">
+							<path
+								d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+						</svg></i>
+					
+				</button>		
+						</div>
+						</form>								
+					</div>				
+        </ul>
+	</header>
+    <main>
+        <section class="container">
+            <div class = "container-title" style=" background: none; color: lightslategrey; width: 1100px;height: 40px;text-align: left;margin-top: 30px;margin-bottom: 15px;"> 
+                <span>
+                    <a href = "index.html" style = "color: lightslategrey; font-size: 15px;"> Trang Chủ </a> >> <a href = "SanPham.html" style = "color: lightslategrey; font-size: 15px;">Sản phẩm</a>
+                    >> <a href = "Albums.html" style = "color: lightslategrey; font-size: 15px;">Albums</a>
+                </span></div>
+          
+
+
+<div class = "bg-primary text-center py-3 mb-4">   <!-- bootstrap.css / 6319-->  <!-- bootstrap.css / 7774-->  <!-- bootstrap.css / 7764--> 
+                <div class = "container py-5">    <!-- bootstrap.css / 545-->    <!-- bootstrap.css / 7812--> 
+                    <div class = "row">   <!-- bootstrap.css / 609--> 
+    <!-- bootstrap.css / 1362-->    <div class = "col-xl-3 col-md-6 mb-4">    <!-- bootstrap.css / 1069-->  <!-- bootstrap.css / 7653 --> 
+                            <div class = "card border-0 shadow">      <!-- bootstrap.css / 4437-->       <!-- bootstrap.css / 6427-->                <!-- bootstrap.css / 7467--> 
+                                <div class = "card-body text-center">   <!-- bootstrap.css / 4471-->  <!-- bootstrap.css / 9397 --> 
+                                    <div class = "card pricing-table-card text-center">   <!--style.css / 316 -->
+                                        <img src = "image\17Carat.png" alt = "..."
+                                            class = "card-img-top">   <!-- bootstrap.css / 4544--> 
+
+                                        <div class = "card-header">   <!-- bootstrap.css / 4498--> 
+                                            <h3 class = "card-title mb-0">17 Carat</h3>   <!-- bootstrap.css / 7557--> 
+                                            <h5>Debut Album</h5>
+                                            <h5>490,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="sp17Carat" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('sp17Carat')">Mua Ngay</a>     <!-- bootstrap.css / 2322-->            <!-- bootstrap.css / 7595--> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\BoysBe.jpeg" alt = "..."
+                                            class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">Boys Be</h3>
+                                            <h5>(2 Version)</h5>
+
+                                            <h5>480,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spBoysBe" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spBoysBe')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\LoveandLetter.jpg" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">Love & Letter</h3>
+                                            
+                                            <h5>480,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spLoveandLetter" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spLoveandLetter')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\LoveandLetterRepackage.jpg" alt = "..."
+                                            class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">Love & Letter</h3>
+                                            <h5>Repackage</h5>
+                                            <h5>490,000 VNĐ</h5>
+                                        </div>
+                                        <div class="card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spLoveandLetterRe" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spLoveandLetterRe')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\GoingSEVENTEEN.jpg" alt = "..."
+                                            class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">Going SEVENTEEN</h3>
+                                            <h5>480,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spGoingSEVENTEEN" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spGoingSEVENTEEN')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\Al1.jpg" alt = "..."
+                                            class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class="card-title mb-0">Al1</h3>
+                                            <h5>(3 Version)</h5>
+                                            <h5>480,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spAl1" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spAl1')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\TeenAge.jpg" alt = "..."
+                                            class = "card-img-top">
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">TEEN, AGE</h3>
+                                            <h5>(4 Version)</h5>
+                                            <h5>490,000 VNĐ</h5>
+                                        </div>
+                                        <div class="card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spTeenAge" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spTeenAge')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\DirectorsCut.jpg" alt = "..."
+                                            class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">DIRECTOR'S CUT</h3>
+                                            <h5>390,000 VNĐ</h5>
+                                        </div>
+                                        <div class="card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spDirectorsCut" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spDirectorsCut')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\WeMakeYou.jpg" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">We Make You</h3>
+                                            <h5>400,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spWeMakeYou" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spWeMakeYou')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\YouMakeMyDay.jpg" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">You Make My Day</h3>
+                                            
+                                            <h5>490,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spYouMakeMyDay" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spYouMakeMyDay')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\YouMakeMyDawn.jpg" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">You Make My Dawn</h3>
+                                            <h5>420,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spYouMakeMyDawn" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spYouMakeMyDawn')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\AnOde.jpg" alt = "..." class = "card-img-top">
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">An Ode</h3>
+                                            <h5>Full Album</h5>
+                                            <h5>500,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spAnOde" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spAnOde')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\Henggarae.jpg" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">헹가래 Heng:garæ</h3>
+                                            <h5>500,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spHenggarae" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spHenggarae')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\24H.jpg" alt = "..."
+                                            class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">24H</h3>
+                                            <h5>Japan 2nd Album</h5>
+                                            <h5>500,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="sp24H" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('sp24H')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\Semicolon.png" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">; [Semicolon]</h3>
+                                            <h5>345,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spSemicolon" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spSemicolon')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\NotAlone.jpg" alt = "..."
+                                            class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">ひとりじゃない</h3>
+                                            <h5>400,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spNotAlone" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spNotAlone')">Mua Ngay</a>
+                                    </div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\YourChoice.jpg" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">Your Choice</h3>
+                                            <h5>(3 Version)</h5>
+                                            <h5>375,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spYourChoice" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spYourChoice')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\Attacca.png" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">Attacca</h3>
+                                            <h5>(3 Version)</h5>
+                                            <h5>410,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spAttacca" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spAttacca')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image\PowerOfLove.jpg" alt = "..." class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">あいのちから</h3>
+                                            <h5>400,000 VNĐ</h5>
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>
+
+                                        <span class="add-cart" style ="display:block; margin:4;
+                                        padding:3;	
+                                        width:100%;		
+                                        text-align:center;
+                                        line-height: 2;">
+                                        Số Lượng: <input id="spPowerOfLove" type="number" min="0" max="100" size="3" value="0" 
+                                            /> </span>
+                                        
+                                        
+                                        
+                                        <br>
+                                            <a href = "#" class = "btn btn-gradient mt-2" onclick="addCart('spPowerOfLove')">Mua Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-xl-3 col-md-6 mb-4">
+                            <div class = "card border-0 shadow">
+                                <div class = "card-body text-center">
+                                    
+                                    <div class = "card pricing-table-card text-center">
+                                        <img src = "image/AlbumFaceTheSun.jpg" alt = "..."
+                                            class = "card-img-top">
+
+                                        <div class = "card-header">
+                                            <h3 class = "card-title mb-0">4th Full Album</h3>
+                                            <h5>(Coming soon in May)</h5>
+                                            
+                                        </div>
+                                        <div class = "card-block">
+                                        </ul>Loading...
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+      
+       
+    </main>
+
+
+
+    <footer>
+        <div class = "container">
+            <div class = "noi-dung about">
+                <h2>Về Chúng Tôi</h2>
+                <p>Lập trình Web <br>
+                    Nhóm: 07 <br>
+                    Thành viên: <br> - Huỳnh Thanh Ngân <br> - Dương Trúc Mai <br> - Lê Ngọc Thảo
+                </p>
+            </div>
+            <div class = "noi-dung links">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href = "index.html">Trang Chủ</a></li>
+                    <li><a href = "#about">Về Chúng Tôi</a></li>
+                    <li><a href = "#info">Thông Tin Liên Lạc</a></li>
+                    <li><a href = "#sevices"> Dịch Vụ Khác </a></li>
+                </ul>
+            </div>
+            <div class = "noi-dung contact">
+                <h2>Thông Tin Liên Hệ</h2>
+                <ul class = "info">
+                    <li>
+                        <span><i class = "fa fa-map-marker"></i></span>
+                        <span>3 chấm, quận Ninh Kiều, Thành phố Cần Thơ</span>
+                    </li>
+                    <li>
+                        <span><i class = "fa fa-phone"></i></span>
+                        <p><a href = "#"> 034.2605.015</a>
+                    </li>
+                    
+                    <li>
+                        <span style="width: 50px;"><i class = "fa fa-envelope" style="width: 30px; position: absolute; top: 74px;" ></i></span>
+                        <p ><a href = "#" style="width: 30px; position: absolute; top: 78px; left: 38px;"> cskh.svt@gmail.com</a></p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a class="on_top" href="#top" style="display: block;"><i class="fa-arrow-circle-up fa"></i></a> <!--style.css / 340-->
+
+
+
+</body>
+
+
+
+</html>

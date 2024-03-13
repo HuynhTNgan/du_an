@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Roboto;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url(https://wallpaperaccess.com/full/1325504.jpg);
+    background-size: 100%;
+}
+
+
+
+    
+
+    header{
+        position: absolute;
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background:rgb(177, 201, 232);;
+        padding: 0 100px ;
+        box-sizing: border-box;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+        0 2px 2px rgba(0,0,0,0.12),
+        0 4px 4px rgba(0,0,0,0.12),
+        0 8px 8px rgba(0,0,0,0.12),
+        0 16px 16px rgba(0,0,0,0.12);
+        border-bottom: 5px solid #333;
+        color: rgb(177, 201, 232);
+        height: 100px; 
+    
+        
+        line-height: 30px;
+        text-align: center;
+        padding: 0;
+    }
+   
+        
+        
+
+header .brand{
+   float: left;
+   height: 100%;
+   line-height: 60px;
+}
+
+header .brand a{
+    position: absolute;
+    display: block;
+    left: 2%;
+    font-size: 24pt;
+    height: 80px;
+    line-height: 60px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+header ul{
+   float: right;
+   display: flex;
+   margin:0;
+   padding: 0;
+}
+
+header ul li{
+   list-style: none;
+}
+
+header ul li a{
+   position: relative;
+   display: block;
+   height: 60px;
+   line-height: 60px;
+   padding: 0 20px;
+   box-sizing: border-box;
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+ul .box-search{
+    float: left;
+    height: 100%;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+}
+
+/* timkiem 
+.search-container{
+	float: right;
+	padding-top:3px;
+	}*/
+
+/*nut*/
+button{
+    width: 100px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline:none;
+    padding: 6px;
+    float: right;
+    height: 100%;
+}
+
+input[type="text"] {
+    width: 370px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline:none;
+    padding: 7px;
+    color: #111;
+}
+
+.menubook{
+    position: absolute;
+    float: left;
+    height: 100%;
+    left: 22%;
+    top: 0%;
+    display: block;
+    line-height: 60px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #666666;
+    line-height: 35px;
+    min-width: 150px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    padding: 6px 8px;
+    z-index: 1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+footer .container .noi-dung{
+    position: relative;
+    width: 300px;
+}
+footer  .container .noi-dung.about{
+    width: 300px;
+    line-height: 25px;
+}
+footer .container .noi-dung.about h2{
+    position: relative;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+footer .container .noi-dung.about h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #cd59ed;
+}
+footer .container .noi-dung.about p{
+    color: #999;
+}
+
+
+.links h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.links h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #0000ff;
+}
+.links{
+   position: relative;
+   width: 200px;
+}
+.links ul li{
+    list-style: none;
+}
+.links ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.links ul li a:hover{
+    color: #fff;
+}
+
+/*lien he*/
+.contact h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.contact h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #0000ff;
+}
+.contact{
+    position: relative;
+    width: 350px;
+}
+.contact .info{
+    position: relative;
+    width: 350px;
+    line-height: 15px;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 20px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.contact .info li span{
+    color: #999;
+}
+.contact .info li a{
+    color: #999;
+    text-decoration: none;
+}
+
+
+
+/*list container*/
+main{
+    margin-top: 70px;
+
+}
+.container{
+    background: transparent;
+}
+.container-title{
+    float: left;
+    margin-top: 0px;
+    margin-bottom: -30px;
+    font-family: Arial;
+    font-size: 18pt;
+    font-weight:normal;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgba(17, 17, 17, 0.479);
+    border-radius: 5px;
+    padding: 0.1rem;
+}
+/* Nut "Mua Ngay" chuyen sang xanh */
+.pricing-table-card:hover {
+	transform: scale(1.05);
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 35px 0px;
+}
+
+
+.pricing-table-card .btn {
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: rgb(0, 0, 0);
+	padding-top: 0.75rem;
+	padding-right: 1.25rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1.25rem;
+	letter-spacing: 1px;
+}
+
+.pricing-table-card .btn-gradient:hover {
+	color: white;
+	background-color: rgb(18, 1, 255);
+}
+
+/* Nut chuyen sang Dau Trang bang JQuery */
+a.on_top { opacity:0.6; display: none;}
+a.on_top:hover{
+background-color: #007bb6;
+color: #fff;
+border: 1px solid #007bb6;
+opacity:1;
+}
+a.on_top i{ font-size: 20px;}
+a.on_top {
+border-radius: 6px;
+background-color: #333333;
+padding: 10px 20px;
+white-space: nowrap; color: #fff;
+position: fixed;
+bottom: 75px;
+right: 30px;
+height: 44px;
+}
+
